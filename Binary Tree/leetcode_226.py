@@ -1,0 +1,10 @@
+class Solution:
+    def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+        if root is None:
+            return None
+        left = self.invertTree(root.left)  # 翻转左子树
+        right = self.invertTree(root.right)  # 翻转右子树
+        root.left = right  # 交换左右儿子
+        root.right = left
+        return root
+
