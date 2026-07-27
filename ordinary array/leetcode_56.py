@@ -1,6 +1,6 @@
 class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
-        intervals.sort(key=lambda p: p[0])
+        intervals.sort(key=lambda p: p[0])#key = lambda p: p[0] 的作用是：让 sort() 按照每个区间的第一个元素进行排序。
         ans = []
         for p in intervals:
             if ans and p[0] <= ans[-1][1]:

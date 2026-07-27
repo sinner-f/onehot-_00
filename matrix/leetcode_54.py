@@ -1,4 +1,4 @@
-DIRS = (0, 1), (1, 0), (0, -1), (-1, 0)  # 右下左上
+DIRS = (0, 1), (1, 0), (0, -1), (-1, 0)  # 右下左上,DIRS 是一个元组（tuple），里面的每个元素又是一个二元元组。
 class Solution:
     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
         m = len(matrix)
